@@ -1,0 +1,36 @@
+package library_app;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+
+public class LibraryController {
+
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private Button homeButton;
+
+    @FXML
+    private Button feedButton;
+
+    @FXML
+    private Button libraryButton;
+
+    @FXML
+    private Button accountButton;
+
+    // Phương thức khởi tạo sau khi FXML được load xong
+    @FXML
+    public void initialize() {
+        System.out.println("LibraryController đã khởi động!");
+
+        // Thử gắn sự kiện tìm kiếm
+        searchField.setOnAction(event -> {
+            String keyword = searchField.getText();
+            System.out.println("Đang tìm kiếm: " + keyword);
+            // Sau này sẽ gọi đến hàm tìm kiếm thật
+        });
+    }
+}
