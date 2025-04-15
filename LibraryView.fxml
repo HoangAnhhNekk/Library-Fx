@@ -3,26 +3,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/20.0.2"
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="library_app.LibraryController"
+            fx:controller="com.example.javafx.LibraryController"
             prefWidth="1336.0" prefHeight="768.0"
             style="-fx-background-color: #F3E5F5;">
 
-    <!-- TOP BAR -->
-    <top>
+    <children>
         <HBox spacing="20.0" alignment="CENTER_LEFT"
-              style="-fx-background-color: #CE93D8;" prefHeight="72.0" prefWidth="1336.0" BorderPane.alignment="CENTER">
+              style="-fx-background-color: #CE93D8;" layoutY="0.0" layoutX="0.0" prefHeight="72.0" prefWidth="1336.0">
             <children>
 
-                <!-- Tên thư viện -->
                 <Label text="📚 MyLibrary" style="-fx-text-fill: white;">
                     <font>
                         <Font size="24.0"/>
                     </font>
                 </Label>
 
-                <!-- Các nút điều hướng -->
                 <Button text="Home" style="-fx-background-color: transparent; -fx-text-fill: white;">
                     <font>
                         <Font size="20.0"/>
@@ -39,17 +36,14 @@
                     </font>
                 </Button>
 
-                <!-- Thanh tìm kiếm -->
                 <TextField promptText="Search" prefWidth="400.0" fx:id="searchField">
                     <font>
                         <Font size="20.0"/>
                     </font>
                 </TextField>
 
-                <!-- Đẩy nút Account sang phải -->
                 <Pane HBox.hgrow="ALWAYS"/>
 
-                <!-- Nút account -->
                 <Button text="Account" style="-fx-background-color: #BA68C8; -fx-text-fill: white;" fx:id="accountButton">
                     <font>
                         <Font size="16.0"/>
@@ -58,12 +52,9 @@
 
             </children>
         </HBox>
-    </top>
 
-    <!-- BODY -->
-    <center>
-        <VBox spacing="20" alignment="CENTER">
-            <!-- Content sẽ được hiển thị ở đây (ví dụ: danh sách sách) -->
+        <VBox spacing="20" alignment="CENTER" layoutY="80.0" layoutX="0.0">
+            <!-- Nội dung chính -->
         </VBox>
-    </center>
-</BorderPane>
+    </children>
+</AnchorPane>
